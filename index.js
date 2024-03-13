@@ -1,11 +1,12 @@
 const sharp = require('sharp');
 
 // Caminho da imagem PNG de entrada e saída JPEG
-const inputImagePath = 'imgs/imagem.png';
-const outputImagePath = 'imgs/imagem.jpg';
+const inputImagePath = 'imgs/imagem.jpg';
+const outputImagePath = 'imgs/imagem.png';
 
-// Use o sharp para ler a imagem PNG e converter em JPEG
-sharp(inputImagePath).jpeg().toFile(outputImagePath, function(err, info) {
+
+// Use o sharp para ler a imagem JPEG e converter em PNG
+sharp(inputImagePath).png().toFile(outputImagePath, function(err, info) {
     if (err) {
         console.error(err);
     } else {
